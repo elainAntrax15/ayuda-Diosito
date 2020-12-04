@@ -55,23 +55,23 @@ namespace RecetasMvc.Controllers
             {
                 return 0;
             }
-            //Quien sabe porque marca asi, no deberia hacerlo, ERES UN MASTER O.OAJJAJAJAJAJ TU ME ENSEÑASTE CHEES XD, qUE Considerado
+            
         }
 
-        public int UpdateStatus()
-        {
-            int estatus = 1;
-            int id = int.Parse(Request.Form.Get("id"));
-            try
-            {
-                int res = Administrador.Baja(id, estatus);
-                return res;
-            }
-            catch (Exception ex)
-            {
-                return 0;
-            }
-        }
+        //public int UpdateStatus()
+        //{
+        //    int estatus = 1;
+        //    int id = int.Parse(Request.Form.Get("id"));
+        //    try
+        //    {
+        //        int res = Receta.Agregar(id, estatus);
+        //        return res;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return 0;
+        //    }
+        //}
 
     }
 }

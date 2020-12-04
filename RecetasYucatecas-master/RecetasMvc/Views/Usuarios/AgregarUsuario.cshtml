@@ -1,8 +1,6 @@
 ﻿
-@{
-    ViewBag.Title = "AgregarUsuario";
-    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
-}
+@{ ViewBag.Title = "AgregarUsuario";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml"; }
 
 
 <div>
@@ -50,6 +48,11 @@
         </div>
     </form>
 </div>
+
+<script src="~/Scripts/Usuario.js"></script>
+<script>$(function () {
+                Usuario.init();
+            });</script>
 
 
 

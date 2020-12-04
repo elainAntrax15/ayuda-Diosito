@@ -52,31 +52,6 @@
                 });
             }
         });
-        eliminar: function (id, status) {
-            if (status == "0") {
-                Dialog.show("¿Estás seguro que quiere Eliminar este Administrador?", Dialog.type.question);
-            }
-            else {
-                Dialog.show("¿Reactivar este Usuario?", Dialog.type.question);
-            }
-            $(".sem-dialog").on("done", function () {
-                $.ajax({
-                    url: Root + "Administrador/UpdateStatus",
-                    type: "POST",
-                    data: { id: id, estatus: status },
-                    beforeSend: function () {
-                        Dialog.show("Eliminando datos", Dialog.type.progress);
-                    },
-                    success: function (response) {
-                        if (response > 0) {
-                            location.reload(true);
-                        }
-                        else {
-                            Dialog.show("A Ocurrido Un Error, Intente De Nuevo", Dialog.type.error);
-                        }
-                    }
-                });
-            });
-        }
+
     },
 }
